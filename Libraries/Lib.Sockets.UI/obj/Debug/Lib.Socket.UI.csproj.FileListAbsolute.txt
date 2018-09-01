@@ -1,0 +1,13 @@
+C:\Tanium\Development\NET\Applications\GenericServerConsole\Lib.Socket.UI\bin\Debug\Lib.Socket.UI.dll
+C:\Tanium\Development\NET\Applications\GenericServerConsole\Lib.Socket.UI\bin\Debug\Lib.Socket.UI.pdb
+C:\Tanium\Development\NET\Applications\GenericServerConsole\Lib.Socket.UI\obj\Debug\Lib.Socket.UI.csprojResolveAssemblyReference.cache
+C:\Tanium\Development\NET\Applications\GenericServerConsole\Lib.Socket.UI\obj\Debug\Lib.Socket.UI_MarkupCompile.cache
+C:\Tanium\Development\NET\Applications\GenericServerConsole\Lib.Socket.UI\obj\Debug\Lib.Socket.UI_MarkupCompile.lref
+C:\Tanium\Development\NET\Applications\GenericServerConsole\Lib.Socket.UI\obj\Debug\Lib.Socket.UI.g.resources
+C:\Tanium\Development\NET\Applications\GenericServerConsole\Lib.Socket.UI\obj\Debug\Lib.Socket.UI.csproj.CoreCompileInputs.cache
+C:\Tanium\Development\NET\Applications\GenericServerConsole\Lib.Socket.UI\obj\Debug\Lib.Socket.UI.dll
+C:\Tanium\Development\NET\Applications\GenericServerConsole\Lib.Socket.UI\obj\Debug\Lib.Socket.UI.pdb
+C:\Tanium\Development\NET\Applications\GenericServerConsole\Lib.Socket.UI\obj\Debug\SocketUIControl.g.cs
+C:\Tanium\Development\NET\Applications\GenericServerConsole\Lib.Socket.UI\obj\Debug\SocketUIMainWindow.g.cs
+C:\Tanium\Development\NET\Applications\GenericServerConsole\Lib.Socket.UI\obj\Debug\SocketUIControl.baml
+C:\Tanium\Development\NET\Applications\GenericServerConsole\Lib.Socket.UI\obj\Debug\SocketUIMainWindow.baml

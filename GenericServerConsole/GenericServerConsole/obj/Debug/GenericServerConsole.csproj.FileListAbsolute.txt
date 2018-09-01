@@ -1,0 +1,7 @@
+C:\Tanium\Development\NET\Applications\GenericServerConsole\GenericServerConsole\bin\Debug\gssc.exe\GenericServerConsole.exe.config
+C:\Tanium\Development\NET\Applications\GenericServerConsole\GenericServerConsole\bin\Debug\gssc.exe\GenericServerConsole.exe
+C:\Tanium\Development\NET\Applications\GenericServerConsole\GenericServerConsole\bin\Debug\gssc.exe\GenericServerConsole.pdb
+C:\Tanium\Development\NET\Applications\GenericServerConsole\GenericServerConsole\obj\Debug\GenericServerConsole.csprojResolveAssemblyReference.cache
+C:\Tanium\Development\NET\Applications\GenericServerConsole\GenericServerConsole\obj\Debug\GenericServerConsole.csproj.CoreCompileInputs.cache
+C:\Tanium\Development\NET\Applications\GenericServerConsole\GenericServerConsole\obj\Debug\GenericServerConsole.exe
+C:\Tanium\Development\NET\Applications\GenericServerConsole\GenericServerConsole\obj\Debug\GenericServerConsole.pdb

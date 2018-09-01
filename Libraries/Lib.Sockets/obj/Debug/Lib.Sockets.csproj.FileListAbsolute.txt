@@ -1,0 +1,5 @@
+C:\Tanium\Development\NET\Libraries\Lib.Sockets\bin\Debug\Lib.Sockets.dll
+C:\Tanium\Development\NET\Libraries\Lib.Sockets\bin\Debug\Lib.Sockets.pdb
+C:\Tanium\Development\NET\Libraries\Lib.Sockets\obj\Debug\Lib.Sockets.csproj.CoreCompileInputs.cache
+C:\Tanium\Development\NET\Libraries\Lib.Sockets\obj\Debug\Lib.Sockets.dll
+C:\Tanium\Development\NET\Libraries\Lib.Sockets\obj\Debug\Lib.Sockets.pdb
