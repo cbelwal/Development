@@ -23,6 +23,16 @@ namespace Lib.Sockets.UI
         public SocketUIControl()
         {
             InitializeComponent();
+            //Get ViewModel and Add Search Update function
+            VMMain vm = this.DataContext as VMMain;
+            vm.OnRXTextHighlight += new VMMain.RXHighlightTextHandler(RXHighlightText);
+        }
+
+
+        private void RXHighlightText(object sender, int start, int end)
+        {
+            txtRX.Focus();            
+            txtRX.Select(start, end);            
         }
 
         //Not the best of ways, will address later

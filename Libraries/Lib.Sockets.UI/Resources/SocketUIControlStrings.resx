@@ -138,6 +138,9 @@
   <data name="lblRX" xml:space="preserve">
     <value>RX</value>
   </data>
+  <data name="lblSearchRX" xml:space="preserve">
+    <value>Search/Next</value>
+  </data>
   <data name="lblSend" xml:space="preserve">
     <value>Send data</value>
   </data>
@@ -161,6 +164,9 @@
   </data>
   <data name="tipEncoding" xml:space="preserve">
     <value>Encoding to be used for text</value>
+  </data>
+  <data name="tipSearchRX" xml:space="preserve">
+    <value>Highlight specific text string or regular expressions, if present in RX</value>
   </data>
   <data name="tipSend" xml:space="preserve">
     <value>Send data over the socket connection</value>

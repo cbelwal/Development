@@ -124,6 +124,15 @@ namespace Lib.Sockets.UI.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Search/Next.
+        /// </summary>
+        public static string lblSearchRX {
+            get {
+                return ResourceManager.GetString("lblSearchRX", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Send data.
         /// </summary>
         public static string lblSend {
@@ -192,6 +201,15 @@ namespace Lib.Sockets.UI.Resources {
         public static string tipEncoding {
             get {
                 return ResourceManager.GetString("tipEncoding", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Highlight specific text string or regular expressions, if present in RX.
+        /// </summary>
+        public static string tipSearchRX {
+            get {
+                return ResourceManager.GetString("tipSearchRX", resourceCulture);
             }
         }
         

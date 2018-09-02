@@ -6,7 +6,8 @@
              xmlns:local="clr-namespace:Lib.Sockets.UI"
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300"
-             xmlns:localRes="clr-namespace:Lib.Sockets.UI.Resources">
+             xmlns:localRes="clr-namespace:Lib.Sockets.UI.Resources"
+             Name="socketUIControl">
     <UserControl.DataContext>
         <local:VMMain/>
     </UserControl.DataContext>
@@ -111,6 +112,7 @@
                         <ColumnDefinition Width="Auto"/>
                         <ColumnDefinition Width="Auto"/>
                         <ColumnDefinition Width="Auto"/>
+                       
                     </Grid.ColumnDefinitions>
                     <ComboBox Grid.Column="0" 
                       ItemsSource="{Binding Path=EncodingEntries}"              
@@ -130,9 +132,22 @@
                     Command="{Binding RXCopyToClipCommand}"
                     Margin="2,2,2,2"
                     Padding="2,2,2,2"/>
+                    <TextBox Grid.Column="3"  
+                        Name ="txtSearchRX" 
+                        Text="{Binding SearchRX, Mode=OneWayToSource}"                  
+                        Margin="2,2,2,2"                 
+                        IsReadOnly="False"
+                        Width="50"/>
+                    <Button Grid.Column="4" 
+                        Content="{x:Static localRes:SocketUIControlStrings.lblSearchRX}"
+                        ToolTip="{x:Static localRes:SocketUIControlStrings.tipSearchRX}"
+                        Command="{Binding RXSearchTextCommand}"
+                        Margin="2,2,2,2"
+                         Padding="2,2,2,2"/>
                 </Grid>
+                
                 <TextBox Grid.Row="1" Name ="txtRX" 
-                 Text="{Binding RX, Mode=OneWay}" 
+                 Text="{Binding RX, Mode=OneWay}"                         
                  TextWrapping="Wrap"
                  AcceptsReturn="True"
                  HorizontalAlignment="Stretch"

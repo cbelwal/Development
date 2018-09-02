@@ -15,7 +15,12 @@ namespace Lib.Sockets.UI
         private string _startStopText;
         private StringBuilder _completeStatus;
         private SocketReceiver _sr;
+        private int _searchIdxRXStart;
+        private string _searchRXText;
 
+        public delegate void RXHighlightTextHandler(object sender,
+           int start, int end);
+        public event RXHighlightTextHandler OnRXTextHighlight;
 
         public VMMain()
         {
@@ -47,6 +52,10 @@ namespace Lib.Sockets.UI
             OnPropertyChanged("EncodingEntry");
             _completeStatus = new StringBuilder();
             ServerMode = true;
+            SearchRX = "";
+            RX = "Hell how are you";
+            _searchRXText = "";
+            _searchIdxRXStart = 0;
         }
 
 
@@ -75,13 +84,34 @@ namespace Lib.Sockets.UI
         public ICommand SendDataCommand { get; private set; }
         public ICommand RXClearCommand { get; private set; }
         public ICommand RXCopyToClipCommand { get; private set; }
+        public ICommand RXSearchTextCommand { get; private set; }
+
         private void InitCommands()
         {
             StartStopCommand = new RelayCommand(ExecuteStartStopCommand);
             SendDataCommand = new RelayCommand(ExecuteSendDataCommand);
             RXClearCommand = new RelayCommand(ExecuteRXClearCommand);
             RXCopyToClipCommand = new RelayCommand(ExecuteRXCopyToClipCommand);
+            RXSearchTextCommand = new RelayCommand(ExecuteRXSearchTextCommand);
         }
+
+        private void ExecuteRXSearchTextCommand(object obj)
+        {
+            
+            _searchIdxRXStart = RX.IndexOf(_searchRXText,_searchIdxRXStart);
+
+            if (_searchIdxRXStart < 0) //Start again
+                _searchIdxRXStart = RX.IndexOf(_searchRXText, 0);
+
+            OnRXTextHighlight(this, _searchIdxRXStart, _searchIdxRXStart + _searchRXText.Length);
+
+            _searchIdxRXStart = _searchIdxRXStart + _searchRXText.Length;
+            if (_searchIdxRXStart > RX.Length)
+               _searchIdxRXStart = 0;
+            
+
+        }
+      
 
         private void ExecuteRXClearCommand(object obj)
         {
@@ -105,6 +135,7 @@ namespace Lib.Sockets.UI
 
         private void ExecuteStartStopCommand(object obj)
         {
+            
             if (_startStopText.CompareTo(Resources.SocketUIControlStrings.lblStart) == 0) //They match
             {
                 StartService();                               
@@ -132,6 +163,19 @@ namespace Lib.Sockets.UI
         public String TX { private get; set; }
         public String RX { get; private set; }
         public String Status { get; private set; }
+        public String SearchRX
+        {
+            private get
+            {
+                return _searchRXText;
+            }
+            set
+            {
+                _searchRXText = value;
+                if (value.Equals(""))
+                    _searchIdxRXStart = 0;
+            }
+        }
         public bool ServerMode { get; set; }
 
         public String CompleteStatus
@@ -191,9 +235,11 @@ namespace Lib.Sockets.UI
         {
             if (ServerMode)
                 StopListenerService();
+
+            //textbox.Select(0, textbox.Text.Length)
         }
 
-        private void SendDataOverConnection()
+            private void SendDataOverConnection()
         {
             if (ServerMode)
                 SendDataToServer(TX);
@@ -202,6 +248,7 @@ namespace Lib.Sockets.UI
         #region Socket Server Related
         private void StartListenerService()
         {
+            
             try
             {
                 SetStatus("Starting socket server ...");
@@ -212,8 +259,9 @@ namespace Lib.Sockets.UI
                 _sr.OnSocketException += new SocketReceiver.SocketExceptionHandler(OnListenSocketException);
                 _sr.CreateServer(_ipAddress, _port);
             }
-            catch //Due to Async op of socket entry will not be here, but just in case
+            catch(Exception ex) //Due to Async op of socket entry will not be here, but just in case
             {
+                SetStatus("Error encountered :" + ex.Message);
                 //Change button to start again as something as gone wrong
                 FlipStartStopText();
             }

@@ -62,6 +62,16 @@
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Libraries\Lib.Sockets.UI\Lib.Sockets.UI.csproj">
+      <Project>{f56089e3-bd2d-4f41-b64e-97c6716f387d}</Project>
+      <Name>Lib.Sockets.UI</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Libraries\Lib.Sockets\Lib.Sockets.csproj">
+      <Project>{2ea7b3b7-e22b-4e1a-8052-e1fb9722b8c3}</Project>
+      <Name>Lib.Sockets</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Fody.2.0.0\build\dotnet\Fody.targets" Condition="Exists('..\packages\Fody.2.0.0\build\dotnet\Fody.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
