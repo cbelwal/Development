@@ -1,2 +1,0 @@
-genericserverconsole.exe -console
-pause

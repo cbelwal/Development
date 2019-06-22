@@ -1,7 +1,0 @@
-C:\Tanium\Development\NET\Applications\GenericServerConsole\GenericServerConsole\obj\Release\GenericServerConsole.csprojResolveAssemblyReference.cache
-C:\Tanium\Development\NET\Applications\GenericServerConsole\GenericServerConsole\obj\Release\GenericServerConsole.csproj.CoreCompileInputs.cache
-C:\Tanium\Development\NET\Applications\GenericServerConsole\GenericServerConsole\obj\Release\GenericServerConsole.exe
-C:\Tanium\Development\NET\Applications\GenericServerConsole\GenericServerConsole\obj\Release\GenericServerConsole.pdb
-C:\Tanium\Development\NET\Applications\GenericServerConsole\GenericServerConsole\bin\Release\GenericServerConsole.exe.config
-C:\Tanium\Development\NET\Applications\GenericServerConsole\GenericServerConsole\bin\Release\GenericServerConsole.exe
-C:\Tanium\Development\NET\Applications\GenericServerConsole\GenericServerConsole\bin\Release\GenericServerConsole.pdb
